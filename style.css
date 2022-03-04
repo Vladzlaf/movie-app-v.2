@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --primary-color: #000000;
+    --secondary-color: #1b1b1b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+}
+
+.header-container {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.search {
+    background-color: #000000;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 30px;
+    color: aliceblue;
+    border: 2px solid #000000;
+}
+
+@media screen and (max-width: 427px){
+    .search {
+        background-color: #000000;
+        font-size: 12px;
+        padding: 15px;
+        border-radius: 30px;
+        color: aliceblue;
+        border: 2px solid #000000;
+        width: 140px;
+
+    }
+}
+
+@media screen and (max-width: 301px){
+    .search {
+        background-color: #000000;
+        font-size: 12px;
+        padding: 15px;
+        border-radius: 30px;
+        color: aliceblue;
+        border: 2px solid #000000;
+    }
+}
+
+
+.search:focus {
+    outline: none;
+    background-color: var(--primary-color);
+}
+
+.form {
+    padding: 15px;
+}
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgb(0 0 0 / 20%);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info span {
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.overview {
+    color: white;
+    background-color: #1b1b1b;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    overflow-y: auto;
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
+.green {
+    color: green;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.red {
+    color: red;
+}
+
+.searchBtn {
+    background-color: var(--primary-color);
+    font-size: 15px;
+    margin: 15px;
+    border-radius: 30px;
+    color: aliceblue;
+    border: 2px solid var(--primary-color);
+    height: 60%;
+    transition: 0.3s;
+}
+
+.fillIn:hover, .fillIn:focus{
+	box-shadow: inset 0 0 0 2em #1a1a1a; 
+}
+
+.search-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+}
+
+@media screen and (max-width: 427px){
+    .search-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        }
+}
+
+.switcher {
+    cursor: pointer;
+	transition: 0.3s;
+	background-position: center;
+	width: 45px;
+	height: 45px;
+	background-image: url('./assets/swg/carbon_sun.svg');
+	background-color: transparent;
+	border: none;
+	background-repeat: no-repeat;
+    margin: 20px;
+}
+
+.light {
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    color: #000;
+    border: 2px solid #ffffff;
+
+}
+
+.light-3:hover, .light-3:focus{
+	box-shadow: inset 0 0 0 2em #cccccc; 
+}
+
+.light-4:hover, .light-4:focus{
+	box-shadow: inset 0 0 0 2em #ffffff; 
+}
+
+
+.light-2 {
+    background-color: #e0dfdf;
+    color: black;
+}
+
+.switcher-light {
+    background-image: url('./assets/swg/moon.svg');
+}
+
