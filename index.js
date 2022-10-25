@@ -15,11 +15,11 @@ async function getData() {
 getData();
 
 function showData(data) {
-  const allPosts = data.results.map(post => {
+  const allPosts = String(data.results.map(post => {
     return `<div class="movie"><img class="movie-post" src="https://image.tmdb.org/t/p/w1280${post.poster_path.replace(',', " " )}" alt="image">
     <div class="movie-info"><h3 class="movie-text">${post.title}</h3><span class="movie-vote">${post.vote_average}</span></div><div class="overview">
     <h3>Overview</h3>${post.overview}</div></div>`
-  })
+  })).replace(/,/g, "")
   galleryContainer.insertAdjacentHTML('beforeend', allPosts);
 }
 
